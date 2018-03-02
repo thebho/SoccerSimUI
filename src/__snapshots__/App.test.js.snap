@@ -1,26 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App.js matches snapshot with defaults 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
+<MuiThemeProvider>
+  <div
+    className="App"
   >
-    <h1
-      className="App-title"
+    <header
+      className="App-header"
     >
-      Mock English Football League
-    </h1>
-  </header>
-  <p
-    className="App-intro"
-  >
-    To get started, edit 
-    <code>
-      src/App.js
-    </code>
-     and save to reload.
-  </p>
-</div>
+      <h1
+        className="App-title"
+      >
+        Mock English Football League
+      </h1>
+    </header>
+    <TeamsTable
+      teams={
+        Array [
+          Object {
+            "gamesDrawn": 0,
+            "gamesLost": 0,
+            "gamesWon": 0,
+            "goalsAllowed": 0,
+            "goalsScored": 0,
+            "name": "Arsenal",
+          },
+          Object {
+            "gamesDrawn": 0,
+            "gamesLost": 0,
+            "gamesWon": 0,
+            "goalsAllowed": 0,
+            "goalsScored": 0,
+            "name": "Sp*rs",
+          },
+        ]
+      }
+    />
+  </div>
+</MuiThemeProvider>
 `;

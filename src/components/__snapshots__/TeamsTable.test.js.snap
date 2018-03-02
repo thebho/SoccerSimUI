@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.js matches snapshot with defaults 1`] = `
+<Table
+  adjustForCheckbox={false}
+  allRowsSelected={false}
+  displaySelectAll={false}
+  fixedFooter={true}
+  fixedHeader={true}
+  height="inherit"
+  multiSelectable={false}
+  selectable={true}
+>
+  <TableHeader
+    adjustForCheckbox={false}
+    displaySelectAll={false}
+    enableSelectAll={true}
+    selectAllSelected={false}
+  >
+    <TableRow
+      displayBorder={true}
+      hoverable={false}
+      hovered={false}
+      selectable={true}
+      striped={false}
+    >
+      <TableHeaderColumn>
+        Team
+      </TableHeaderColumn>
+      <TableHeaderColumn>
+        Wins
+      </TableHeaderColumn>
+      <TableHeaderColumn>
+        Draws
+      </TableHeaderColumn>
+      <TableHeaderColumn>
+        Losses
+      </TableHeaderColumn>
+    </TableRow>
+  </TableHeader>
+  <TableBody
+    allRowsSelected={false}
+    deselectOnClickaway={true}
+    displayRowCheckbox={false}
+    multiSelectable={false}
+    preScanRows={true}
+    selectable={true}
+    style={Object {}}
+  >
+    <TableRow
+      displayBorder={true}
+      hoverable={false}
+      hovered={false}
+      key="Arsenal"
+      selectable={true}
+      striped={false}
+    >
+      <TableRowColumn
+        hoverable={false}
+      >
+        Arsenal
+      </TableRowColumn>
+            
+      <TableRowColumn
+        hoverable={false}
+      >
+        0
+      </TableRowColumn>
+      <TableRowColumn
+        hoverable={false}
+      >
+        0
+      </TableRowColumn>
+            
+      <TableRowColumn
+        hoverable={false}
+      >
+        0
+      </TableRowColumn>
+    </TableRow>
+    <TableRow
+      displayBorder={true}
+      hoverable={false}
+      hovered={false}
+      key="Sp*rs"
+      selectable={true}
+      striped={false}
+    >
+      <TableRowColumn
+        hoverable={false}
+      >
+        Sp*rs
+      </TableRowColumn>
+            
+      <TableRowColumn
+        hoverable={false}
+      >
+        0
+      </TableRowColumn>
+      <TableRowColumn
+        hoverable={false}
+      >
+        0
+      </TableRowColumn>
+            
+      <TableRowColumn
+        hoverable={false}
+      >
+        0
+      </TableRowColumn>
+    </TableRow>
+  </TableBody>
+</Table>
+`;
