@@ -11,7 +11,7 @@ import {
 } from 'material-ui/Table';
 
 type Props = {
-  teams: Array<Team>,
+  teams?: Array<Team>,
 };
 
 const TeamsTable = (props: Props): typeof Table => (
@@ -33,14 +33,14 @@ const TeamsTable = (props: Props): typeof Table => (
     <TableBody
       displayRowCheckbox={false}
     >
-    {props.teams.map((team) => (
+    {props.teams ? props.teams.map((team) => (
       <TableRow
         key={team.name}
       >
         <TableRowColumn>{team.name}</TableRowColumn>      <TableRowColumn>{team.gamesWon}</TableRowColumn>
         <TableRowColumn>{team.gamesDrawn}</TableRowColumn>      <TableRowColumn>{team.gamesLost}</TableRowColumn>
       </TableRow>
-    ))}
+    )): null}
     </TableBody>
   </Table>
 );
