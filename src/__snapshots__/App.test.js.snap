@@ -18,16 +18,16 @@ exports[`App.js matches snapshot with defaults 1`] = `
       teams={
         Array [
           Object {
-            "gamesDrawn": 0,
+            "gamesDrawn": 1,
             "gamesLost": 0,
-            "gamesWon": 0,
+            "gamesWon": 2,
             "goalsAllowed": 0,
             "goalsScored": 0,
             "name": "Arsenal",
           },
           Object {
-            "gamesDrawn": 0,
-            "gamesLost": 0,
+            "gamesDrawn": 1,
+            "gamesLost": 2,
             "gamesWon": 0,
             "goalsAllowed": 0,
             "goalsScored": 0,

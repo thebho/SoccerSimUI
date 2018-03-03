@@ -4,6 +4,7 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
 <Table
   adjustForCheckbox={false}
   allRowsSelected={false}
+  className="Table"
   displaySelectAll={false}
   fixedFooter={true}
   fixedHeader={true}
@@ -23,19 +24,38 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       hovered={false}
       selectable={true}
       striped={false}
+      style={
+        Object {
+          "paddingLeft": "10px",
+          "paddingRight": "10px",
+          "textAlign": "center",
+          "width": "40px",
+        }
+      }
     >
-      <TableHeaderColumn>
+      <TableHeaderColumn
+        className="Table-Col-Nam"
+      >
         Team
       </TableHeaderColumn>
-      <TableHeaderColumn>
-        Wins
-      </TableHeaderColumn>
-      <TableHeaderColumn>
-        Draws
-      </TableHeaderColumn>
-      <TableHeaderColumn>
-        Losses
-      </TableHeaderColumn>
+      <TeamHeaderColumnDefault
+        text="W"
+      />
+      <TeamHeaderColumnDefault
+        text="D"
+      />
+      <TeamHeaderColumnDefault
+        text="L"
+      />
+      <TeamHeaderColumnDefault
+        text="GF"
+      />
+      <TeamHeaderColumnDefault
+        text="GA"
+      />
+      <TeamHeaderColumnDefault
+        text="Points"
+      />
     </TableRow>
   </TableHeader>
   <TableBody
@@ -56,27 +76,29 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       striped={false}
     >
       <TableRowColumn
+        className="Table-Col-Nam"
         hoverable={false}
       >
         Arsenal
       </TableRowColumn>
-            
-      <TableRowColumn
-        hoverable={false}
-      >
-        2
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        0
-      </TableRowColumn>
-            
-      <TableRowColumn
-        hoverable={false}
-      >
-        0
-      </TableRowColumn>
+      <TeamColumnDefault
+        text={2}
+      />
+      <TeamColumnDefault
+        text={0}
+      />
+      <TeamColumnDefault
+        text={0}
+      />
+      <TeamColumnDefault
+        text={20}
+      />
+      <TeamColumnDefault
+        text={0}
+      />
+      <TeamColumnDefault
+        text={4}
+      />
     </TableRow>
     <TableRow
       displayBorder={true}
@@ -87,27 +109,29 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       striped={false}
     >
       <TableRowColumn
+        className="Table-Col-Nam"
         hoverable={false}
       >
         Sp*rs
       </TableRowColumn>
-            
-      <TableRowColumn
-        hoverable={false}
-      >
-        0
-      </TableRowColumn>
-      <TableRowColumn
-        hoverable={false}
-      >
-        0
-      </TableRowColumn>
-            
-      <TableRowColumn
-        hoverable={false}
-      >
-        2
-      </TableRowColumn>
+      <TeamColumnDefault
+        text={0}
+      />
+      <TeamColumnDefault
+        text={0}
+      />
+      <TeamColumnDefault
+        text={2}
+      />
+      <TeamColumnDefault
+        text={0}
+      />
+      <TeamColumnDefault
+        text={20}
+      />
+      <TeamColumnDefault
+        text={0}
+      />
     </TableRow>
   </TableBody>
 </Table>
@@ -117,6 +141,7 @@ exports[`TeamsTable renders without teams 1`] = `
 <Table
   adjustForCheckbox={false}
   allRowsSelected={false}
+  className="Table"
   displaySelectAll={false}
   fixedFooter={true}
   fixedHeader={true}
@@ -136,19 +161,38 @@ exports[`TeamsTable renders without teams 1`] = `
       hovered={false}
       selectable={true}
       striped={false}
+      style={
+        Object {
+          "paddingLeft": "10px",
+          "paddingRight": "10px",
+          "textAlign": "center",
+          "width": "40px",
+        }
+      }
     >
-      <TableHeaderColumn>
+      <TableHeaderColumn
+        className="Table-Col-Nam"
+      >
         Team
       </TableHeaderColumn>
-      <TableHeaderColumn>
-        Wins
-      </TableHeaderColumn>
-      <TableHeaderColumn>
-        Draws
-      </TableHeaderColumn>
-      <TableHeaderColumn>
-        Losses
-      </TableHeaderColumn>
+      <TeamHeaderColumnDefault
+        text="W"
+      />
+      <TeamHeaderColumnDefault
+        text="D"
+      />
+      <TeamHeaderColumnDefault
+        text="L"
+      />
+      <TeamHeaderColumnDefault
+        text="GF"
+      />
+      <TeamHeaderColumnDefault
+        text="GA"
+      />
+      <TeamHeaderColumnDefault
+        text="Points"
+      />
     </TableRow>
   </TableHeader>
   <TableBody

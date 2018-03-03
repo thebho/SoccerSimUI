@@ -8,17 +8,17 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 const teamsTable: Array<Team> = [
   {
     name: 'Arsenal',
-    gamesWon: 0,
+    gamesWon: 2,
     gamesLost: 0,
-    gamesDrawn: 0,
+    gamesDrawn: 1,
     goalsScored: 0,
     goalsAllowed: 0,
   },
   {
     name: 'Sp*rs',
     gamesWon: 0,
-    gamesLost: 0,
-    gamesDrawn: 0,
+    gamesLost: 2,
+    gamesDrawn: 1,
     goalsScored: 0,
     goalsAllowed: 0,
   },

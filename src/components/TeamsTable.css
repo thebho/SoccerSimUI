@@ -1,0 +1,14 @@
+.Table {
+  display: flex;
+}
+
+.Table-Col-Nam {
+  width: 160px;
+}
+
+.Table-Col {
+  width: 60px;
+  padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
