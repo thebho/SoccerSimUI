@@ -4,14 +4,22 @@ import type { Action } from '../model';
 import initialState from './initialState';
 
 const teamsReducer = (state: Object = initialState.teams, action: Action) => {
-  console.log(state)
   switch (action.type) {
     case types.LOAD_TEAMS_SUCCESS:
-      console.log('Requesting teams')
-      return action.teams;
+      return Object.assign({}, state, {
+        teams: action.teams,
+      });
+    case types.LOAD_TEAMS_FAILURE:
+      return Object.assign({}, state, {
+        teams: [],
+      });
+    case types.INIT:
+      return state;
     default:
       console.log('Unknown action type ' + action.type)
-      return state;
+      return Object.assign({}, state, {
+        teams: [],
+      });
   }
 }
 

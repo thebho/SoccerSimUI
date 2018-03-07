@@ -1,7 +1,10 @@
 //@flow
-import React from 'react';
+import React, { Component } from 'react';
 import './TeamsTable.css';
 import type { Team } from '../model';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actions from '../actions/teams';
 import {
   Table,
   TableBody,
@@ -43,50 +46,64 @@ const TeamColumnDefault = (props: {text: number}) => {
   )
 }
 
-const TeamsTable = (props: Props): typeof Table => (
-  <Table
-    displaySelectAll={false}
-    adjustForCheckbox={false}
-    className="Table"
-  >
-    <TableHeader
-      adjustForCheckbox={false}
-      displaySelectAll={false}
-    >
-      <TableRow
-      style={styles.tableCol}
-      >
-        <TableHeaderColumn className="Table-Col-Nam">
-          Team
-        </TableHeaderColumn>
-        <TeamHeaderColumnDefault text='W'/>
-        <TeamHeaderColumnDefault text='D'/>
-        <TeamHeaderColumnDefault text='L'/>
-        <TeamHeaderColumnDefault text='GF'/>
-        <TeamHeaderColumnDefault text='GA'/>
-        <TeamHeaderColumnDefault text='Points'/>
-      </TableRow>
-    </TableHeader>
-    <TableBody
-      displayRowCheckbox={false}
-    >
-    {props.teams ? props.teams.map((team) => (
-      <TableRow
-        key={team.name}
-      >
-        <TableRowColumn className="Table-Col-Nam">
-          {team.name}
-        </TableRowColumn>
-        <TeamColumnDefault text={team.gamesWon}/>
-        <TeamColumnDefault text={team.gamesDrawn}/>
-        <TeamColumnDefault text={team.gamesLost}/>
-        <TeamColumnDefault text={team.goalsScored}/>
-        <TeamColumnDefault text={team.goalsAllowed}/>
-        <TeamColumnDefault text={team.gamesWon * 2 + team.gamesDrawn}/>
-      </TableRow>
-    )): null}
-    </TableBody>
-  </Table>
-);
+class TeamsTable extends Component <Props> {
 
-export default TeamsTable;
+  render() {
+    const { teams } = this.props;
+
+    return (
+      <Table
+      displaySelectAll={false}
+      adjustForCheckbox={false}
+      className="Table"
+    >
+      <TableHeader
+        adjustForCheckbox={false}
+        displaySelectAll={false}
+      >
+        <TableRow
+        style={styles.tableCol}
+        >
+          <TableHeaderColumn className="Table-Col-Nam">
+            Team
+          </TableHeaderColumn>
+          <TeamHeaderColumnDefault text='W'/>
+          <TeamHeaderColumnDefault text='D'/>
+          <TeamHeaderColumnDefault text='L'/>
+          <TeamHeaderColumnDefault text='GF'/>
+          <TeamHeaderColumnDefault text='GA'/>
+          <TeamHeaderColumnDefault text='Points'/>
+        </TableRow>
+      </TableHeader>
+      <TableBody
+        displayRowCheckbox={false}
+      >
+      {teams ? teams.map((team) => (
+        <TableRow
+          key={team.Abv}
+        >
+          <TableRowColumn className="Table-Col-Nam">
+            {team.Name}
+          </TableRowColumn>
+          <TeamColumnDefault text={team.GamesWon}/>
+          <TeamColumnDefault text={team.GamesDrawn}/>
+          <TeamColumnDefault text={team.GamesLost}/>
+          <TeamColumnDefault text={team.GoalsScored}/>
+          <TeamColumnDefault text={team.GoalsAllowed}/>
+          <TeamColumnDefault text={team.GamesWon * 2 + team.GamesDrawn}/>
+        </TableRow>
+      )): null}
+      </TableBody>
+    </Table>
+  )
+  }
+};
+
+const mapStateToProps = state => {
+  return { teams: state.teamsReducer.teams }
+}
+ 
+const mapDispatchToProps = dispatch => {}
+
+
+export default connect(mapStateToProps)(TeamsTable);

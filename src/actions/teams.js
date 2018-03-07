@@ -7,10 +7,11 @@ export const loadTeams = () => {
   return (dispatch: Function) => {
     return TeamsAPI.getAllTeams()
       .then(teams => {
-        dispatch(loadTeamsSuccess(teams));
+        dispatch(loadTeamsSuccess(teams))
       })
       .catch(error =>{
-        throw(error);
+        console.error('Load Teams: ' + error);
+        dispatch(loadTeamsFailure())
       });
   };
 };
@@ -19,5 +20,11 @@ export const loadTeamsSuccess = (teams: Object): Object => {
   return {
     type: types.LOAD_TEAMS_SUCCESS,
     teams,
+  };
+};
+
+export const loadTeamsFailure = (): Object => {
+  return {
+    type: types.LOAD_TEAMS_FAILURE,
   };
 };

@@ -1,12 +1,13 @@
 // @flow
 
 export type Team = {
-  name: string,
-  gamesWon: number,
-  gamesLost: number,
-  gamesDrawn: number,
-  goalsScored: number,
-  goalsAllowed: number,
+  Abv: string,
+  Name: string,
+  GamesWon: number,
+  GamesLost: number,
+  GamesDrawn: number,
+  GoalsScored: number,
+  GoalsAllowed: number,
 };
 
 export type Action = {

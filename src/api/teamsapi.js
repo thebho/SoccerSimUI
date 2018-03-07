@@ -5,9 +5,6 @@ class TeamsAPI {
       .then(response => {
         return response.json();
       })
-      .catch(error => {
-        return error;
-      });
   };
 };
 
