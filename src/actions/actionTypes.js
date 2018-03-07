@@ -1,0 +1,1 @@
+export const LOAD_TEAMS_SUCCESS = 'LOAD_TEAMS_SUCCESS';
