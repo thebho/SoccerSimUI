@@ -8,3 +8,8 @@ export type Team = {
   goalsScored: number,
   goalsAllowed: number,
 };
+
+export type Action = {
+  type: string,
+  teams: Function,
+}

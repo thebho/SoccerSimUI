@@ -28,12 +28,12 @@ class App extends Component<*> {
   render() {
     return (
       <MuiThemeProvider>
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Mock English Football League</h1>
-        </header>
-        <TeamsTable teams={teamsTable} />
-        </div>
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Mock English Football League</h1>
+          </header>
+          <TeamsTable teams={teamsTable} />
+          </div>
       </MuiThemeProvider>
     );
   }
