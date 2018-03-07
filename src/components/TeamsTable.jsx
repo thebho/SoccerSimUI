@@ -22,7 +22,10 @@ const styles = {
   tableCol: {
     paddingLeft: '10px',
     paddingRight: '10px',
+    paddingTop: '0px',
+    paddingBottom: '0px',
     width: '40px',
+    height: '25px',
     textAlign: 'center',
   },
 };
@@ -67,11 +70,12 @@ class TeamsTable extends Component <Props> {
           <TableHeaderColumn className="Table-Col-Nam">
             Team
           </TableHeaderColumn>
+          <TeamHeaderColumnDefault text='GP'/>
           <TeamHeaderColumnDefault text='W'/>
           <TeamHeaderColumnDefault text='D'/>
           <TeamHeaderColumnDefault text='L'/>
           <TeamHeaderColumnDefault text='GF'/>
-          <TeamHeaderColumnDefault text='GA'/>
+          <TeamHeaderColumnDefault text='GA'/>          <TeamHeaderColumnDefault text='GD'/>
           <TeamHeaderColumnDefault text='Points'/>
         </TableRow>
       </TableHeader>
@@ -81,15 +85,18 @@ class TeamsTable extends Component <Props> {
       {teams ? teams.map((team) => (
         <TableRow
           key={team.Abv}
+          style={{height: '25px'}}
         >
-          <TableRowColumn className="Table-Col-Nam">
+          <TableRowColumn className="Table-Col-Nam" style={{height: '25px'}}>
             {team.Name}
           </TableRowColumn>
+          <TeamColumnDefault text={team.GamesWon + team.GamesDrawn + team.GamesLost}/>
           <TeamColumnDefault text={team.GamesWon}/>
           <TeamColumnDefault text={team.GamesDrawn}/>
           <TeamColumnDefault text={team.GamesLost}/>
           <TeamColumnDefault text={team.GoalsScored}/>
           <TeamColumnDefault text={team.GoalsAllowed}/>
+          <TeamColumnDefault text={team.GoalsScored - team.GoalsAllowed}/>
           <TeamColumnDefault text={team.GamesWon * 2 + team.GamesDrawn}/>
         </TableRow>
       )): null}
