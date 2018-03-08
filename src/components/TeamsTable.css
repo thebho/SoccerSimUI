@@ -1,9 +1,10 @@
 .Table {
   display: flex;
+  width: auto;
 }
 
 .Table-Col-Nam {
-  width: 160px;
+  width: 120px;
 }
 
 .Table-Col {

@@ -16,3 +16,18 @@
 .App-intro {
   font-size: large;
 }
+
+.App-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App-teams {
+  flex-basis: 0;
+
+}
+
+.App-schedule {
+  height: auto;
+  flex-basis: 400px;
+}

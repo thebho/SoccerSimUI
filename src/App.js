@@ -13,8 +13,14 @@ class App extends Component<*> {
           <header className="App-header">
             <h1 className="App-title">Mock English Football League</h1>
           </header>
-          <TeamsTable />
+          <div className="App-body">
+            <TeamsTable className="App-teams"/>
+            <div className="App-schedule">
+              <h1>Matchweek</h1>
+              <p>Placeholder for Weekly Matchups and simming</p>
+            </div>
           </div>
+        </div>
       </MuiThemeProvider>
     );
   }
