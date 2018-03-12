@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import { loadTeams } from './actions/teams';
 import { loadMatches } from './actions/matches';
 import { startNewSeason } from './actions/season';
-import initialState from './reducers/initialState'
 
 // Initiate redux store
 const store = configureStore();

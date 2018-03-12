@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MatchWeek } from './MatchWeek';
+import { Matches } from './Matches';
 import { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 const mockMatches = [
   {
@@ -25,21 +26,14 @@ const mockMatches = [
     Season: 'TestSeason',
   },
 ];
-describe('MatchWeek', () => {
+
+describe('TeamsTable', () => {
   it('matches snapshot with matches', () => {
     const wrapper = shallow(
       <MuiThemeProvider>
-        <MatchWeek season={{name: 'TestSeason', matchWeek: 1 }} matches={mockMatches} />
+        <Matches weeklyMatches={mockMatches} />
       </MuiThemeProvider>
-).dive();
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
-  it('renders without matches', () => {
-    const wrapper = shallow(
-      <MuiThemeProvider>
-        <MatchWeek season={{name: 'TestSeason', matchWeek: 1 }} />
-      </MuiThemeProvider>
-).dive();
+);
     expect(toJson(wrapper)).toMatchSnapshot();
   })
-});
+})
