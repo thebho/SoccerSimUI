@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TeamsTable from './TeamsTable';
+import { TeamsTable } from './TeamsTable';
 import { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const mockTeams = [
   {
@@ -12,6 +13,7 @@ const mockTeams = [
     gamesDrawn: 0,
     goalsScored: 20,
     goalsAllowed: 0,
+    Abv: 'ARS',
   },
   {
     name: 'Sp*rs',
@@ -20,15 +22,24 @@ const mockTeams = [
     gamesDrawn: 0,
     goalsScored: 0,
     goalsAllowed: 20,
+    Abv: 'TOT',
   },
 ];
 describe('TeamsTable', () => {
   it('matches snapshot with mock teams', () => {
-    const wrapper = shallow(<TeamsTable teams={mockTeams} />);
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <TeamsTable teams={mockTeams} />
+      </MuiThemeProvider>
+).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
   });
   it('renders without teams', () => {
-    const wrapper = shallow(<TeamsTable />);
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <TeamsTable />
+      </MuiThemeProvider>
+).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
   })
 });

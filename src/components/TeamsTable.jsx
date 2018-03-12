@@ -49,11 +49,10 @@ const TeamColumnDefault = (props: {text: number}) => {
   )
 }
 
-class TeamsTable extends Component <Props> {
+export class TeamsTable extends Component <Props> {
 
   render() {
     const { teams } = this.props;
-
     return (
       <Table
       displaySelectAll={false}
