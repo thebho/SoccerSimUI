@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import type { Team } from './model';
 import TeamsTable from './components/TeamsTable';
+import MatchWeek from './components/MatchWeek';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component<*> {
@@ -15,10 +16,7 @@ class App extends Component<*> {
           </header>
           <div className="App-body">
             <TeamsTable className="App-teams"/>
-            <div className="App-schedule">
-              <h1>Matchweek</h1>
-              <p>Placeholder for Weekly Matchups and simming</p>
-            </div>
+            <MatchWeek className="App-schedule" />
           </div>
         </div>
       </MuiThemeProvider>

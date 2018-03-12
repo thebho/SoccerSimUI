@@ -3,21 +3,21 @@ import * as types from '../actions/actionTypes';
 import type { Action } from '../model';
 import initialState from './initialState';
 
-const teamsReducer = (state: Object = initialState.teams, action: Action) => {
+const matches = (state: Object = initialState.matches, action: Action): Object  => {
   switch (action.type) {
-    case types.LOAD_TEAMS_SUCCESS:
+    case types.LOAD_MATCHES_SUCCESS:
       return Object.assign({}, state, {
-        teams: action.teams,
+        matches: action.matches,
       });
-    case types.LOAD_TEAMS_FAILURE:
+    case types.LOAD_MATCHES_FAILURE:
       return Object.assign({}, state, {
-        teams: [],
+        matches: [],
       });
     case types.INIT:
       return state;
     default:
-      return state;
+      return state
   }
 }
 
-export default teamsReducer;
+export default matches;

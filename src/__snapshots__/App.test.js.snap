@@ -14,28 +14,16 @@ exports[`App.js matches snapshot with defaults 1`] = `
         Mock English Football League
       </h1>
     </header>
-    <TeamsTable
-      teams={
-        Array [
-          Object {
-            "gamesDrawn": 1,
-            "gamesLost": 0,
-            "gamesWon": 2,
-            "goalsAllowed": 0,
-            "goalsScored": 0,
-            "name": "Arsenal",
-          },
-          Object {
-            "gamesDrawn": 1,
-            "gamesLost": 2,
-            "gamesWon": 0,
-            "goalsAllowed": 0,
-            "goalsScored": 0,
-            "name": "Sp*rs",
-          },
-        ]
-      }
-    />
+    <div
+      className="App-body"
+    >
+      <Connect(TeamsTable)
+        className="App-teams"
+      />
+      <Connect(MatchWeek)
+        className="App-schedule"
+      />
+    </div>
   </div>
 </MuiThemeProvider>
 `;

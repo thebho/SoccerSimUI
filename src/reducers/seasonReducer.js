@@ -3,15 +3,11 @@ import * as types from '../actions/actionTypes';
 import type { Action } from '../model';
 import initialState from './initialState';
 
-const teamsReducer = (state: Object = initialState.teams, action: Action) => {
+const season = (state: Object = initialState.season, action: Action): Object  => {
   switch (action.type) {
-    case types.LOAD_TEAMS_SUCCESS:
+    case types.NEW_SEASON_STARTED:
       return Object.assign({}, state, {
-        teams: action.teams,
-      });
-    case types.LOAD_TEAMS_FAILURE:
-      return Object.assign({}, state, {
-        teams: [],
+        season: {name: action.season.name, matchWeek: action.season.matchWeek},
       });
     case types.INIT:
       return state;
@@ -20,4 +16,4 @@ const teamsReducer = (state: Object = initialState.teams, action: Action) => {
   }
 }
 
-export default teamsReducer;
+export default season;

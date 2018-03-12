@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MatchWeek matches snapshot with matches 1`] = `
+<div
+  className="MatchWeek"
+>
+  <h2>
+    Week 
+    1
+  </h2>
+  <p>
+    TestSeason
+  </p>
+  <Matches
+    weeklyMatches={
+      Array [
+        Object {
+          "AwayTeam": "TOT",
+          "AwayTeamGoals": null,
+          "HomeTeam": "ARS",
+          "HomeTeamGoals": null,
+          "ID": 1,
+          "MatchWeek": 1,
+          "Season": "TestSeason",
+        },
+        Object {
+          "AwayTeam": "CHE",
+          "AwayTeamGoals": null,
+          "HomeTeam": "WHA",
+          "HomeTeamGoals": null,
+          "ID": 2,
+          "MatchWeek": 1,
+          "Season": "TestSeason",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`MatchWeek renders without matches 1`] = `
+<div
+  className="MatchWeek"
+>
+  <h2>
+    Week 
+    1
+  </h2>
+  <p>
+    TestSeason
+  </p>
+  <Matches />
+</div>
+`;
