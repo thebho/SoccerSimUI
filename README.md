@@ -12,3 +12,5 @@ Early workings of a React/Redux front end for soccersim
 1. Add testing for redux/backend rework
 1. Add preview of match week games
 1. Add button for simming the match week/ updating results
+
+![Alt text](/assets/ui_screenshot.png?raw=true "UI Screenshot")
