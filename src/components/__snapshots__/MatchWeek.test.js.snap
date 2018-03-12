@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamsTable matches snapshot with matches 1`] = `
+<div>
+  <h1>
+    TestSeason
+  </h1>
+  <h2>
+    Matchweek 
+    1
+  </h2>
+  <p>
+    Placeholder for Weekly Matchups and simming
+  </p>
+  <div
+    key="1"
+  >
+    ARS
+     
+    TOT
+  </div>
+  <div
+    key="2"
+  >
+    WHA
+     
+    CHE
+  </div>
+</div>
+`;
+
+exports[`TeamsTable renders without matches 1`] = `
+<div>
+  <h1>
+    TestSeason
+  </h1>
+  <h2>
+    Matchweek 
+    1
+  </h2>
+  <p>
+    Placeholder for Weekly Matchups and simming
+  </p>
+</div>
+`;

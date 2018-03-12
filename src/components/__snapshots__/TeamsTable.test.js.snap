@@ -26,8 +26,11 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       striped={false}
       style={
         Object {
+          "height": "25px",
+          "paddingBottom": "0px",
           "paddingLeft": "10px",
           "paddingRight": "10px",
+          "paddingTop": "0px",
           "textAlign": "center",
           "width": "40px",
         }
@@ -38,6 +41,9 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       >
         Team
       </TableHeaderColumn>
+      <TeamHeaderColumnDefault
+        text="GP"
+      />
       <TeamHeaderColumnDefault
         text="W"
       />
@@ -52,6 +58,10 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       />
       <TeamHeaderColumnDefault
         text="GA"
+      />
+                
+      <TeamHeaderColumnDefault
+        text="GD"
       />
       <TeamHeaderColumnDefault
         text="Points"
@@ -71,66 +81,74 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
       displayBorder={true}
       hoverable={false}
       hovered={false}
-      key="Arsenal"
+      key="ARS"
       selectable={true}
       striped={false}
+      style={
+        Object {
+          "height": "25px",
+        }
+      }
     >
       <TableRowColumn
         className="Table-Col-Nam"
         hoverable={false}
-      >
-        Arsenal
-      </TableRowColumn>
-      <TeamColumnDefault
-        text={2}
+        style={
+          Object {
+            "height": "25px",
+          }
+        }
       />
       <TeamColumnDefault
-        text={0}
+        text={NaN}
+      />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault
+        text={NaN}
       />
       <TeamColumnDefault
-        text={0}
-      />
-      <TeamColumnDefault
-        text={20}
-      />
-      <TeamColumnDefault
-        text={0}
-      />
-      <TeamColumnDefault
-        text={4}
+        text={NaN}
       />
     </TableRow>
     <TableRow
       displayBorder={true}
       hoverable={false}
       hovered={false}
-      key="Sp*rs"
+      key="TOT"
       selectable={true}
       striped={false}
+      style={
+        Object {
+          "height": "25px",
+        }
+      }
     >
       <TableRowColumn
         className="Table-Col-Nam"
         hoverable={false}
-      >
-        Sp*rs
-      </TableRowColumn>
-      <TeamColumnDefault
-        text={0}
+        style={
+          Object {
+            "height": "25px",
+          }
+        }
       />
       <TeamColumnDefault
-        text={0}
+        text={NaN}
+      />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault />
+      <TeamColumnDefault
+        text={NaN}
       />
       <TeamColumnDefault
-        text={2}
-      />
-      <TeamColumnDefault
-        text={0}
-      />
-      <TeamColumnDefault
-        text={20}
-      />
-      <TeamColumnDefault
-        text={0}
+        text={NaN}
       />
     </TableRow>
   </TableBody>
@@ -163,8 +181,11 @@ exports[`TeamsTable renders without teams 1`] = `
       striped={false}
       style={
         Object {
+          "height": "25px",
+          "paddingBottom": "0px",
           "paddingLeft": "10px",
           "paddingRight": "10px",
+          "paddingTop": "0px",
           "textAlign": "center",
           "width": "40px",
         }
@@ -175,6 +196,9 @@ exports[`TeamsTable renders without teams 1`] = `
       >
         Team
       </TableHeaderColumn>
+      <TeamHeaderColumnDefault
+        text="GP"
+      />
       <TeamHeaderColumnDefault
         text="W"
       />
@@ -189,6 +213,10 @@ exports[`TeamsTable renders without teams 1`] = `
       />
       <TeamHeaderColumnDefault
         text="GA"
+      />
+                
+      <TeamHeaderColumnDefault
+        text="GD"
       />
       <TeamHeaderColumnDefault
         text="Points"
