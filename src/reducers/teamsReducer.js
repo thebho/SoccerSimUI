@@ -18,6 +18,6 @@ const teamsReducer = (state: Object = initialState.teams, action: Action) => {
     default:
       return state;
   }
-}
+};
 
 export default teamsReducer;

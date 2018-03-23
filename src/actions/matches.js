@@ -6,11 +6,11 @@ export const loadMatches = (week: string, seasonName: string) => {
   return (dispatch: Function) => {
     return MatchesAPI.getMatchWeek(week, seasonName)
       .then(matches => {
-        dispatch(loadMatchesSuccess(matches))
+        dispatch(loadMatchesSuccess(matches));
       })
-      .catch(error =>{
+      .catch(error => {
         console.error('Load Matches: ' + error);
-        dispatch(loadMatchesFailure())
+        dispatch(loadMatchesFailure());
       });
   };
 };

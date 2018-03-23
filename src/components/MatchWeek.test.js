@@ -8,12 +8,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 const mockMatches = [
   {
     ID: 1,
-  	HomeTeam: 'ARS',
-  	AwayTeam: 'TOT',
-  	HomeTeamGoals: null,
-  	AwayTeamGoals: null,
-  	MatchWeek: 1,
-  	Season: 'TestSeason',
+    HomeTeam: 'ARS',
+    AwayTeam: 'TOT',
+    HomeTeamGoals: null,
+    AwayTeamGoals: null,
+    MatchWeek: 1,
+    Season: 'TestSeason',
   },
   {
     ID: 2,
@@ -29,17 +29,20 @@ describe('MatchWeek', () => {
   it('matches snapshot with matches', () => {
     const wrapper = shallow(
       <MuiThemeProvider>
-        <MatchWeek season={{name: 'TestSeason', matchWeek: 1 }} matches={mockMatches} />
+        <MatchWeek
+          season={{ name: 'TestSeason', matchWeek: 1 }}
+          matches={mockMatches}
+        />
       </MuiThemeProvider>
-).dive();
+    ).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
   });
   it('renders without matches', () => {
     const wrapper = shallow(
       <MuiThemeProvider>
-        <MatchWeek season={{name: 'TestSeason', matchWeek: 1 }} />
+        <MatchWeek season={{ name: 'TestSeason', matchWeek: 1 }} />
       </MuiThemeProvider>
-).dive();
+    ).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
-  })
+  });
 });

@@ -3,7 +3,10 @@ import * as types from '../actions/actionTypes';
 import type { Action } from '../model';
 import initialState from './initialState';
 
-const matches = (state: Object = initialState.matches, action: Action): Object  => {
+const matches = (
+  state: Object = initialState.matches,
+  action: Action
+): Object => {
   switch (action.type) {
     case types.LOAD_MATCHES_SUCCESS:
       return Object.assign({}, state, {
@@ -16,8 +19,8 @@ const matches = (state: Object = initialState.matches, action: Action): Object  
     case types.INIT:
       return state;
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default matches;

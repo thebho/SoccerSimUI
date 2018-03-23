@@ -6,7 +6,7 @@ import seasonReducer from './seasonReducer';
 const rootReducer = combineReducers({
   teamsReducer,
   matchesReducer,
-  seasonReducer
+  seasonReducer,
 });
 
 export default rootReducer;

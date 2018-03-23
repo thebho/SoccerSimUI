@@ -31,7 +31,7 @@ describe('TeamsTable', () => {
       <MuiThemeProvider>
         <TeamsTable teams={mockTeams} />
       </MuiThemeProvider>
-).dive();
+    ).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
   });
   it('renders without teams', () => {
@@ -39,7 +39,7 @@ describe('TeamsTable', () => {
       <MuiThemeProvider>
         <TeamsTable />
       </MuiThemeProvider>
-).dive();
+    ).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
-  })
+  });
 });

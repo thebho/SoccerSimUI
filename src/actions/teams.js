@@ -2,16 +2,15 @@
 import TeamsAPI from '../api/teamsapi';
 import * as types from './actionTypes';
 
-
 export const loadTeams = () => {
   return (dispatch: Function) => {
     return TeamsAPI.getAllTeams()
       .then(teams => {
-        dispatch(loadTeamsSuccess(teams))
+        dispatch(loadTeamsSuccess(teams));
       })
-      .catch(error =>{
+      .catch(error => {
         console.error('Load Teams: ' + error);
-        dispatch(loadTeamsFailure())
+        dispatch(loadTeamsFailure());
       });
   };
 };
