@@ -1,19 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions/matches';
-import { bindActionCreators } from 'redux';
 import type { Match, Season } from '../model';
 import Matches from './Matches';
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table';
-
 import './MatchWeek.css';
 
 type Props = {

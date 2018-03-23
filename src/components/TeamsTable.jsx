@@ -2,9 +2,7 @@
 import React, { Component } from 'react';
 import './TeamsTable.css';
 import type { Team } from '../model';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actions from '../actions/teams';
 import {
   Table,
   TableBody,
@@ -109,7 +107,4 @@ const mapStateToProps = state => {
   return { teams: state.teamsReducer.teams }
 }
  
-const mapDispatchToProps = dispatch => {}
-
-
 export default connect(mapStateToProps)(TeamsTable);

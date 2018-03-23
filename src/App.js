@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import './App.css';
-import type { Team } from './model';
 import TeamsTable from './components/TeamsTable';
 import MatchWeek from './components/MatchWeek';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';

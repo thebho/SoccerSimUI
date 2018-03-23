@@ -1,8 +1,6 @@
 // @flow
 import MatchesAPI from '../api/matchesapi';
 import * as types from './actionTypes';
-import type Match from '../model';
-
 
 export const loadMatches = (week: string, seasonName: string) => {
   return (dispatch: Function) => {
