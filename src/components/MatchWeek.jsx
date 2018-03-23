@@ -18,12 +18,15 @@ import './MatchWeek.css';
 
 type Props = {
   matches?: Array<Match>,
-  season: Season,
+  season?: Season,
 };
 
 export class MatchWeek extends Component <Props> {
 
   render() {
+    if (this.props.season == null) {
+      return null;
+    }
     const { matches, season } = this.props;
     return (
       <div className="MatchWeek">

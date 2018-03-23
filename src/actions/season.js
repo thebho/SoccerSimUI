@@ -1,12 +1,24 @@
 // @flow
 import * as types from './actionTypes';
 import type { Season } from '../model';
+import MatchesAPI from '../api/matchesapi';
+import { loadMatches } from './matches';
+
+
 
 
 export const startNewSeason = (seasonName: string) => {
   console.log('starting')
   return (dispatch: Function) => {
-    return dispatch(dispatchNewSeason({name: seasonName, matchWeek: 1}))
+    return MatchesAPI.startNewSeason(seasonName)
+      .then((response: Object) => {
+        console.log(response)
+        dispatch(loadMatches('1', seasonName))
+        return dispatch(dispatchNewSeason({name: seasonName, matchWeek: 1}))
+    })
+    .catch((error: Object) => {
+      console.error(error)
+    });
   };
 };
 

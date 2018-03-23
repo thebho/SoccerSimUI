@@ -10,7 +10,8 @@ import { startNewSeason } from './actions/season';
 
 // Initiate redux store
 const store = configureStore();
-const initialSeason = '2017/18'
+const date = new Date();
+const initialSeason = 'Season ' + (date.getMonth()+1) +'/' +  date.getDate() + ' ' + date.getMilliseconds()
 
 // Start initial season
 store.dispatch(startNewSeason(initialSeason));
@@ -18,7 +19,7 @@ store.dispatch(startNewSeason(initialSeason));
 // Load current teams from backend
 store.dispatch(loadTeams());
 // Load first weeks matches
-store.dispatch(loadMatches(store.getState().seasonReducer.season.matchWeek, store.getState().seasonReducer.season.name))
+store.dispatch(loadMatches('1', initialSeason))
 
 ReactDOM.render(
   <Provider store={store}>
