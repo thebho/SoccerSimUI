@@ -14,7 +14,7 @@ class MatchesAPI {
   }
   static startNewSeason(seasonName: string) {
     console.log('Scheduling new season ' + seasonName);
-    var url = new URL('http://localhost:8000/matches');
+    var url = new URL('http://localhost:8000/season');
     url.searchParams.append('season_name', seasonName);
     return fetch(url, {
       method: 'POST',
