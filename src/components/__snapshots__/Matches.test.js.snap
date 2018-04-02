@@ -1,3 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TeamsTable matches snapshot with matches 1`] = `undefined`;
+exports[`TeamsTable matches snapshot with matches 1`] = `
+<Matches
+  weeklyMatches={
+    Array [
+      Object {
+        "AwayTeam": "TOT",
+        "AwayTeamGoals": null,
+        "HomeTeam": "ARS",
+        "HomeTeamGoals": null,
+        "ID": 1,
+        "MatchWeek": 1,
+        "Season": "TestSeason",
+      },
+      Object {
+        "AwayTeam": "CHE",
+        "AwayTeamGoals": null,
+        "HomeTeam": "WHA",
+        "HomeTeamGoals": null,
+        "ID": 2,
+        "MatchWeek": 1,
+        "Season": "TestSeason",
+      },
+    ]
+  }
+/>
+`;

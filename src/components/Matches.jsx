@@ -34,6 +34,7 @@ class Matches extends Component<Props> {
         {this.props.weeklyMatches ? this.props.weeklyMatches.map(match => (
           <TableRow
             style={{height: '25px'}}
+            key={match.ID}
           >
             <TableRowColumn style={styles.tableCol}>
               {match.HomeTeam}  {match.HomeTeamGoals}

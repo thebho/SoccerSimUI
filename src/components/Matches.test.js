@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Matches } from './Matches';
+import Matches from './Matches';
 import { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
