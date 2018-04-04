@@ -98,9 +98,7 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
             "height": "25px",
           }
         }
-      >
-        ARS
-      </TableRowColumn>
+      />
       <TeamColumnDefault
         text={NaN}
       />
@@ -137,9 +135,7 @@ exports[`TeamsTable matches snapshot with mock teams 1`] = `
             "height": "25px",
           }
         }
-      >
-        TOT
-      </TableRowColumn>
+      />
       <TeamColumnDefault
         text={NaN}
       />

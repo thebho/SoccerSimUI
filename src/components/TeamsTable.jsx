@@ -85,7 +85,7 @@ export class TeamsTable extends Component <Props> {
           style={{height: '25px'}}
         >
           <TableRowColumn className="Table-Col-Nam" style={{height: '25px'}}>
-            {team.TeamID}
+            {team.Name}
           </TableRowColumn>
           <TeamColumnDefault text={team.GamesWon + team.GamesDrawn + team.GamesLost}/>
           <TeamColumnDefault text={team.GamesWon}/>
