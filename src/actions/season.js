@@ -3,6 +3,7 @@ import * as types from './actionTypes';
 import type { Season } from '../model';
 import MatchesAPI from '../api/matchesapi';
 import { loadMatches } from './matches';
+import { loadTeams } from './teams';
 
 export const startNewSeason = (seasonName: string) => {
   console.log('starting');
@@ -11,6 +12,7 @@ export const startNewSeason = (seasonName: string) => {
       .then((response: Object) => {
         console.log(response);
         dispatch(loadMatches('1', seasonName));
+        dispatch(loadTeams(seasonName));
         return dispatch(dispatchNewSeason({ name: seasonName, matchWeek: 1 }));
       })
       .catch((error: Object) => {

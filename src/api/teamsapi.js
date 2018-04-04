@@ -1,7 +1,9 @@
 class TeamsAPI {
-  static getAllTeams() {
-    console.log('calling get all teams');
-    return fetch('http://localhost:8000/teams').then(response => {
+  static getAllTeams(season: string) {
+    console.log(season);
+    let seasonRequest = 'http://localhost:8000/seasons/' + season;
+    return fetch(seasonRequest).then(response => {
+      console.log(response);
       return response.json();
     });
   }
