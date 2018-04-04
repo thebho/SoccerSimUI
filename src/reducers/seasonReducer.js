@@ -2,8 +2,6 @@
 import * as types from '../actions/actionTypes';
 import type { Action } from '../model';
 import initialState from './initialState';
-import { loadTeams } from '../actions/teams';
-import { loadMatches } from '../actions/matches';
 
 const season = (
   state: Object = initialState.season,
@@ -11,7 +9,7 @@ const season = (
 ): Object => {
   switch (action.type) {
     case types.NEW_SEASON_STARTED:
-      
+
       return Object.assign({}, state, {
         season: {
           name: action.season.name,
