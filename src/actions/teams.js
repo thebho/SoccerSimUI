@@ -2,9 +2,9 @@
 import TeamsAPI from '../api/teamsapi';
 import * as types from './actionTypes';
 
-export const loadTeams = () => {
+export const loadTeams = (season: string) => {
   return (dispatch: Function) => {
-    return TeamsAPI.getAllTeams()
+    return TeamsAPI.getAllTeams(season)
       .then(teams => {
         dispatch(loadTeamsSuccess(teams));
       })

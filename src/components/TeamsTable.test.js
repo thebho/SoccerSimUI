@@ -14,6 +14,7 @@ const mockTeams = [
     goalsScored: 20,
     goalsAllowed: 0,
     Abv: 'ARS',
+    TeamID: 'ARS',
   },
   {
     name: 'Sp*rs',
@@ -23,6 +24,7 @@ const mockTeams = [
     goalsScored: 0,
     goalsAllowed: 20,
     Abv: 'TOT',
+    TeamID: 'TOT',
   },
 ];
 describe('TeamsTable', () => {

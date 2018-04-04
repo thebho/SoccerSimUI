@@ -81,11 +81,11 @@ export class TeamsTable extends Component <Props> {
       >
       {teams ? teams.map((team) => (
         <TableRow
-          key={team.Abv}
+          key={team.TeamID}
           style={{height: '25px'}}
         >
           <TableRowColumn className="Table-Col-Nam" style={{height: '25px'}}>
-            {team.Name}
+            {team.TeamID}
           </TableRowColumn>
           <TeamColumnDefault text={team.GamesWon + team.GamesDrawn + team.GamesLost}/>
           <TeamColumnDefault text={team.GamesWon}/>
