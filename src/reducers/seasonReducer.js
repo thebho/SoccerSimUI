@@ -9,7 +9,6 @@ const season = (
 ): Object => {
   switch (action.type) {
     case types.NEW_SEASON_STARTED:
-
       return Object.assign({}, state, {
         season: {
           name: action.season.name,

@@ -5,7 +5,6 @@ import MatchesAPI from '../api/matchesapi';
 import { loadMatches } from './matches';
 import { loadTeams } from './teams';
 
-
 export const startNewSeason = (seasonName: string) => {
   console.log('starting');
   return (dispatch: Function) => {
