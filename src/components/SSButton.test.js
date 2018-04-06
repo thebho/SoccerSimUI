@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { fn } from 'jest';
 import SSButton from './SSButton';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';

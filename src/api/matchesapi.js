@@ -27,7 +27,7 @@ class MatchesAPI {
       method: 'POST',
       body,
     });
-  };
+  }
 }
 
 export default MatchesAPI;

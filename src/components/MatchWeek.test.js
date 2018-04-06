@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { fn } from 'jest';
 import { MatchWeek } from './MatchWeek';
 import { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
