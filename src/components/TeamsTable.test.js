@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { fn } from 'jest';
 import { TeamsTable } from './TeamsTable';
 import { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
