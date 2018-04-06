@@ -35,6 +35,10 @@ exports[`MatchWeek matches snapshot with matches 1`] = `
       ]
     }
   />
+  <SSButton
+    label="Sim Week"
+    onClick={[Function]}
+  />
 </div>
 `;
 
@@ -50,5 +54,11 @@ exports[`MatchWeek renders without matches 1`] = `
     TestSeason
   </p>
   <Matches />
+  <SSButton
+    label="Sim Week"
+    onClick={[Function]}
+  />
 </div>
 `;
+
+exports[`MatchWeek renders without season 1`] = `""`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SSButton matches snapshot 1`] = `
+<RaisedButton
+  backgroundColor="#C5E1A5"
+  disabled={false}
+  fullWidth={false}
+  label="Test Label"
+  labelPosition="after"
+  onClick={[Function]}
+  primary={false}
+  secondary={false}
+  style={
+    Object {
+      "margin": 10,
+    }
+  }
+/>
+`;
