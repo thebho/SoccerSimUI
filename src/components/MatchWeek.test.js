@@ -66,16 +66,4 @@ describe('MatchWeek', () => {
     wrapper.instance().simWeek();
     expect(simWeek).toHaveBeenCalledWith(1, 'TestSeason');
   });
-  // it('doesnt call simWeek with no season', () => {
-  //   const simWeek = jest.fn();
-  //   const wrapper = shallow(
-  //     <MuiThemeProvider>
-  //       <MatchWeek
-  //         simWeek={simWeek}
-  //       />
-  //     </MuiThemeProvider>
-  //   ).dive();
-  //   wrapper.instance().simWeek();
-  //   expect(simWeek).toHaveBeenCalledTimes(0);
-  // })
 });

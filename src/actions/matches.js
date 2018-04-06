@@ -35,12 +35,11 @@ export const loadMatches = (week: string, seasonName: string) => {
   };
 };
 
-export const simWeek = (week: string, seasonName: string): Object => {
-  console.log(week);
+export const simWeek = (week: number, seasonName: string): Object => {
   return (dispatch: Function) => {
     return MatchesAPI.simMatchWeek(week, seasonName)
       .then((response: Object) => {
-        dispatch(loadMatches(week, seasonName));
+        dispatch(loadMatches(week.toString(), seasonName));
         dispatch(loadTeams(seasonName));
         return dispatch(simWeekSuccess());
       })

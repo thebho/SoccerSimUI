@@ -16,12 +16,12 @@ type Props = {
 export class MatchWeek extends Component <Props> {
   simWeek = () => {
     this.props.simWeek(this.props.season.matchWeek, this.props.season.name );
-  }
+  };
 
   render() {
     if (this.props.season == null) {
       return null;
-    }
+    };
     const { matches, season } = this.props;
     return (
       <div className='MatchWeek'>
@@ -32,18 +32,18 @@ export class MatchWeek extends Component <Props> {
       </div>
     );
   };
-}
+};
 
 
 const mapStateToProps = (state: Object): Object => {
   return {
     matches: state.matchesReducer.matches,
     season: state.seasonReducer.season,
-  }
-}
+  };
+};
 const mapDispatchToProps = (dispatch: Function): Object => {
   return {
-    simWeek: (week: string, season: string) => dispatch(simWeek(week,season)),
+    simWeek: (week: number, season: string) => dispatch(simWeek(week,season)),
   };
 };
  
