@@ -10,7 +10,7 @@ describe('SSButton', () => {
   it('matches snapshot', () => {
     const onClickMock = jest.fn();
     const wrapper = shallow(
-      <SSButton label="Test Label" onClick={onClickMock} />
+      <SSButton label='Test Label' onClick={onClickMock} />
     );
     expect(toJson(wrapper)).toMatchSnapshot();
     wrapper.simulate('click');

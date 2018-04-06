@@ -11,11 +11,11 @@ const SSButton = (props: Props) => (
   <RaisedButton
     label={props.label}
     onClick={props.onClick}
-    backgroundColor="#C5E1A5"
+    backgroundColor='#C5E1A5'
     style={{
       margin: 10,
     }}
   />
-)
+);
 
 export default SSButton;

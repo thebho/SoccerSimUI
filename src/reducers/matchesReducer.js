@@ -7,7 +7,6 @@ const matches = (
   state: Object = initialState.matches,
   action: Action
 ): Object => {
-  console.log('matches');
   switch (action.type) {
     case types.LOAD_MATCHES_SUCCESS:
       return Object.assign({}, state, {
@@ -22,7 +21,6 @@ const matches = (
     case types.INIT:
       return state;
     default:
-      console.log('Unknown action type ' + action.type);
       return state;
   }
 };
