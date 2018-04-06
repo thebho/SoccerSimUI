@@ -4,13 +4,23 @@ import { connect } from 'react-redux';
 import type { Match, Season } from '../model';
 import Matches from './Matches';
 import './MatchWeek.css';
+import SSButton from './SSButton';
+import { simWeek } from '../actions/matches';
 
 type Props = {
   matches?: Array<Match>,
-  season?: Season,
+  season: Season,
+  simWeek: Function,
 };
 
 export class MatchWeek extends Component <Props> {
+
+  simWeek = () => {
+
+    console.log('Simming week' + this.props.season.name + ' ' + this.props.season.matchWeek );
+    this.props.simWeek(this.props.season.matchWeek, this.props.season.name );
+
+  }
 
   render() {
     if (this.props.season == null) {
@@ -22,6 +32,7 @@ export class MatchWeek extends Component <Props> {
         <h2>Week {season.matchWeek}</h2>
         <p>{season.name}</p>
         <Matches weeklyMatches={matches}/>
+        <SSButton label="Sim Week" onClick={this.simWeek}/>
       </div>
     );
   };
@@ -34,7 +45,10 @@ const mapStateToProps = state => {
     season: state.seasonReducer.season,
   }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    simWeek: (week: string, season: string) => dispatch(simWeek(week,season)),
+  };
+};
  
-// const mapDispatchToProps = dispatch => {}
-
-export default connect(mapStateToProps)(MatchWeek);
+export default connect(mapStateToProps, mapDispatchToProps)(MatchWeek);

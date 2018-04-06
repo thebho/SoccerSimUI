@@ -5,6 +5,7 @@ import TeamsTable from './components/TeamsTable';
 import MatchWeek from './components/MatchWeek';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+
 class App extends Component<*> {
   render() {
     return (
@@ -15,7 +16,7 @@ class App extends Component<*> {
           </header>
           <div className="App-body">
             <TeamsTable className="App-teams"/>
-            <MatchWeek className="App-schedule" />
+            <MatchWeek className="App-schedule" store={this.props.store}/>
           </div>
         </div>
       </MuiThemeProvider>

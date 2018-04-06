@@ -45,4 +45,37 @@ describe('MatchWeek', () => {
     ).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
   });
+  it('renders without season', () => {
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <MatchWeek />
+      </MuiThemeProvider>
+    ).dive();
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+  it('calls simWeek', () => {
+    const simWeek = jest.fn();
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <MatchWeek
+          season={{ name: 'TestSeason', matchWeek: 1 }}
+          simWeek={simWeek}
+        />
+      </MuiThemeProvider>
+    ).dive();
+    wrapper.instance().simWeek();
+    expect(simWeek).toHaveBeenCalledWith(1, 'TestSeason');
+  });
+  // it('doesnt call simWeek with no season', () => {
+  //   const simWeek = jest.fn();
+  //   const wrapper = shallow(
+  //     <MuiThemeProvider>
+  //       <MatchWeek
+  //         simWeek={simWeek}
+  //       />
+  //     </MuiThemeProvider>
+  //   ).dive();
+  //   wrapper.instance().simWeek();
+  //   expect(simWeek).toHaveBeenCalledTimes(0);
+  // })
 });

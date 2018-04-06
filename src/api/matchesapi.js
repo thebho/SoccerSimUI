@@ -8,19 +8,32 @@ class MatchesAPI {
     url.searchParams.append('season_name', seasonName);
     url.searchParams.append('week', week);
     return fetch(url).then((response: Object) => {
-      console.log(response);
       return response.json();
     });
   }
-  static startNewSeason(seasonName: string) {
+  static startNewSeason(seasonName: string): Object {
     console.log('Scheduling new season ' + seasonName);
     var url = new URL('http://localhost:8000/season');
     url.searchParams.append('season_name', seasonName);
     return fetch(url, {
       method: 'POST',
     }).then((response: Object) => {
-      console.log(response);
       return;
+    });
+  }
+  static simMatchWeek(week: number, seasonName: string): Object {
+    console.log('Simming match week ' + seasonName + ' ' + week);
+    var body = JSON.stringify({
+      seasonName: seasonName,
+      week: week,
+      action: 'simWeek',
+    });
+    console.log(body);
+    return fetch('http://localhost:8000/matches', {
+      method: 'POST',
+      body: body,
+    }).then((response: Object) => {
+      console.log(response);
     });
   }
 }
