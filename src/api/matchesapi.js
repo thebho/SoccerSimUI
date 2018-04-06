@@ -9,14 +9,14 @@ class MatchesAPI {
     return fetch(url).then((response: Object) => {
       return response.json();
     });
-  };
+  }
   static startNewSeason(seasonName: string): Object {
     var url = new URL('http://localhost:8000/season');
     url.searchParams.append('season_name', seasonName);
     return fetch(url, {
       method: 'POST',
     });
-  };
+  }
   static simMatchWeek(week: number, seasonName: string): Object {
     var body = JSON.stringify({
       seasonName,
@@ -28,6 +28,6 @@ class MatchesAPI {
       body,
     });
   };
-};
+}
 
 export default MatchesAPI;
