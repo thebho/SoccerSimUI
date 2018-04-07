@@ -5,4 +5,5 @@ export default {
     name: '',
   },
   matches: [],
+  weekComplete: false,
 };

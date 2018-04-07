@@ -14,7 +14,7 @@ export type Team = {
 export type Action = {
   type: string,
   teams?: Function,
-  season: Object,
+  season: Season,
   matches?: Function,
 }
 
