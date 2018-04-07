@@ -36,7 +36,38 @@ exports[`MatchWeek matches snapshot with matches 1`] = `
     }
   />
   <SSButton
+    disabled={false}
     label="Sim Week"
+    onClick={[Function]}
+  />
+  <SSButton
+    disabled={true}
+    label="Advance Week"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`MatchWeek renders with weekComplete 1`] = `
+<div
+  className="MatchWeek"
+>
+  <h2>
+    Week 
+    1
+  </h2>
+  <p>
+    TestSeason
+  </p>
+  <Matches />
+  <SSButton
+    disabled={true}
+    label="Sim Week"
+    onClick={[Function]}
+  />
+  <SSButton
+    disabled={false}
+    label="Advance Week"
     onClick={[Function]}
   />
 </div>
@@ -55,7 +86,13 @@ exports[`MatchWeek renders without matches 1`] = `
   </p>
   <Matches />
   <SSButton
+    disabled={false}
     label="Sim Week"
+    onClick={[Function]}
+  />
+  <SSButton
+    disabled={true}
+    label="Advance Week"
     onClick={[Function]}
   />
 </div>

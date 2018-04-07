@@ -16,8 +16,6 @@ const matches = (
       return Object.assign({}, state, {
         matches: [],
       });
-    case types.SIM_WEEK_SUCCESS:
-      return state;
     case types.INIT:
       return state;
     default:

@@ -25,13 +25,19 @@ const mockMatches = [
     Season: 'TestSeason',
   },
 ];
+
+var mockSeason: Season = {
+  name: 'TestSeason',
+  matchWeek: 1,
+};
 describe('MatchWeek', () => {
   it('matches snapshot with matches', () => {
     const wrapper = shallow(
       <MuiThemeProvider>
         <MatchWeek
-          season={{ name: 'TestSeason', matchWeek: 1 }}
+          season={mockSeason}
           matches={mockMatches}
+          weekComplete={false}
         />
       </MuiThemeProvider>
     ).dive();
@@ -40,7 +46,15 @@ describe('MatchWeek', () => {
   it('renders without matches', () => {
     const wrapper = shallow(
       <MuiThemeProvider>
-        <MatchWeek season={{ name: 'TestSeason', matchWeek: 1 }} />
+        <MatchWeek season={mockSeason} weekComplete={false} />
+      </MuiThemeProvider>
+    ).dive();
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+  it('renders with weekComplete', () => {
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <MatchWeek season={mockSeason} weekComplete={true} />
       </MuiThemeProvider>
     ).dive();
     expect(toJson(wrapper)).toMatchSnapshot();
@@ -57,13 +71,33 @@ describe('MatchWeek', () => {
     const simWeek = jest.fn();
     const wrapper = shallow(
       <MuiThemeProvider>
-        <MatchWeek
-          season={{ name: 'TestSeason', matchWeek: 1 }}
-          simWeek={simWeek}
-        />
+        <MatchWeek season={mockSeason} simWeek={simWeek} />
       </MuiThemeProvider>
     ).dive();
     wrapper.instance().simWeek();
     expect(simWeek).toHaveBeenCalledWith(1, 'TestSeason');
+  });
+  it('calls advanceWeek', () => {
+    const advanceWeek = jest.fn();
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <MatchWeek season={mockSeason} advanceWeek={advanceWeek} />
+      </MuiThemeProvider>
+    ).dive();
+    wrapper.instance().advanceWeek();
+    expect(advanceWeek).toHaveBeenCalledWith(2, 'TestSeason');
+  });
+  it('calls advanceWeek', () => {
+    const advanceWeek = jest.fn();
+    const wrapper = shallow(
+      <MuiThemeProvider>
+        <MatchWeek
+          season={{ ...mockSeason, matchWeek: 38 }}
+          advanceWeek={advanceWeek}
+        />
+      </MuiThemeProvider>
+    ).dive();
+    wrapper.instance().advanceWeek();
+    expect(advanceWeek).toHaveBeenCalledTimes(0);
   });
 });
