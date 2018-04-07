@@ -1,5 +1,8 @@
 # Soccer Sim UI
-Early workings of a React/Redux front end for soccersim
+React/Redux front end for soccersim
+
+![Alt text](/assets/ui_screenshot_v2.png?raw=true "UI Screenshot")
+
 
 ## Install
 1. Clone and start `soccersim` repo
@@ -15,4 +18,9 @@ Early workings of a React/Redux front end for soccersim
 1. Better test coverage
 1. Add ability to advance to next season at week 38
 
-![Alt text](/assets/ui_screenshot_v2.png?raw=true "UI Screenshot")
+## Long Term
+1. Add ability to tweak team ratings
+1. Select a team to see their stats in modal, including last 5 games (WWLDW), previous score, and next match
+1. Support relation/promotion
+1. Support non-PL leagues
+
