@@ -5,8 +5,12 @@ import {
   Table,
   TableBody,
   TableRow,
-  TableRowColumn,
+  TableCell,
+  TableHead,
 } from 'material-ui/Table';
+import { withStyles } from 'material-ui/styles';
+import Paper from 'material-ui/Paper';
+
 
 const styles = {
   tableCol: {
@@ -22,31 +26,32 @@ type Props = {
 
 class Matches extends Component<Props> {
   render() {
-  return (
-      <Table
-      adjustForCheckbox={false}
-      className="Table"
-      displaySelectAll={false}
-      >
-      <TableBody
-        displayRowCheckbox={false}
-      >
-        {this.props.weeklyMatches ? this.props.weeklyMatches.map(match => (
-          <TableRow
-            style={{height: '25px'}}
-            key={match.ID}
-          >
-            <TableRowColumn style={styles.tableCol}>
-              {match.HomeTeam}  {match.HomeTeamGoals}
-            </TableRowColumn>
-            <TableRowColumn style={styles.tableCol}>
-              {match.AwayTeam}  {match.AwayTeamGoals}
-            </TableRowColumn>
-          </TableRow>
-          )): null}
-        </TableBody>
-      </Table>
-  )}
+    if (!this.props.weeklyMatches) {
+      return null;
+    }
+    console.log('rendering')
+    return (
+      <Paper>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell numeric={false}>
+                Test
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell numeric={false}>
+                Test
+              </TableCell>
+            </TableRow>
+
+          </TableBody>
+        </Table>
+      </Paper>
+    )
+  }
 }
 
-export default Matches;
+export default withStyles(styles)(Matches);

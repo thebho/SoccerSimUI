@@ -28,20 +28,20 @@ const mockTeams = [
   },
 ];
 describe('TeamsTable', () => {
-  it('matches snapshot with mock teams', () => {
-    const wrapper = shallow(
-      <MuiThemeProvider>
-        <TeamsTable teams={mockTeams} />
-      </MuiThemeProvider>
-    ).dive();
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
-  it('renders without teams', () => {
-    const wrapper = shallow(
-      <MuiThemeProvider>
-        <TeamsTable />
-      </MuiThemeProvider>
-    ).dive();
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
+  // it('matches snapshot with mock teams', () => {
+  //   const wrapper = shallow(
+  //     <MuiThemeProvider>
+  //       <TeamsTable teams={mockTeams} />
+  //     </MuiThemeProvider>
+  //   ).dive();
+  //   expect(toJson(wrapper)).toMatchSnapshot();
+  // });
+  // it('renders without teams', () => {
+  //   const wrapper = shallow(
+  //     <MuiThemeProvider>
+  //       <TeamsTable />
+  //     </MuiThemeProvider>
+  //   ).dive();
+  //   expect(toJson(wrapper)).toMatchSnapshot();
+  // });
 });

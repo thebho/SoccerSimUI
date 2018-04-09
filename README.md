@@ -16,6 +16,7 @@ React/Redux front end for soccersim
 1. Sort team table by points
 1. Add Champions League/Europa League/Relegation coloring
 1. Better test coverage
+1. Add the option to go forward/backwards between weeks to see upcoming matches or previous weeks results
 1. Add ability to advance to next season at week 38
 
 ## Long Term
@@ -23,4 +24,3 @@ React/Redux front end for soccersim
 1. Select a team to see their stats in modal, including last 5 games (WWLDW), previous score, and next match
 1. Support relation/promotion
 1. Support non-PL leagues
-

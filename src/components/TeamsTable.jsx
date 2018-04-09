@@ -1,110 +1,51 @@
-//@flow
 import React, { Component } from 'react';
 import './TeamsTable.css';
 import type { Team } from '../model';
 import { connect } from 'react-redux';
-import {
-  Table,
+
+import Table, {
   TableBody,
-  TableHeader,
-  TableHeaderColumn,
+  TableCell,
+  TableHead,
+  TablePagination,
   TableRow,
-  TableRowColumn,
+  TableSortLabel,
 } from 'material-ui/Table';
 
-type Props = {
-  teams?: Array<Team>,
-};
+const columnData = [
+  { id: 'team', numeric: false, label: 'Team'},
+  { id: 'gp', numeric: true, label: 'GP'},
+  { id: 'wins', numeric: true, label: 'W'},
+  { id: 'draws', numeric: true, label: 'D'},
+  { id: 'losses', numeric: true, label: 'L'},
+  { id: 'goalsFor', numeric: true, label: 'GF'},
+  { id: 'goalsAgainst', numeric: true, label: 'GA'},
+  { id: 'goalDifference', numeric: true, label: 'GD'},
+  { id: 'points', numeric: true, label: 'Points'},
+];
 
-const styles = {
-  tableCol: {
-    paddingLeft: '10px',
-    paddingRight: '10px',
-    paddingTop: '0px',
-    paddingBottom: '0px',
-    width: '40px',
-    height: '25px',
-    textAlign: 'center',
-  },
-};
-
-const TeamHeaderColumnDefault = (props: {text: string}) => {
-  return (
-    <TableHeaderColumn
-      style={styles.tableCol}
-    >
-      {props.text}
-    </TableHeaderColumn>
-  )
-}
-const TeamColumnDefault = (props: {text: number}) => {
-  return (
-    <TableRowColumn
-      style={styles.tableCol}
-    >
-    {props.text}
-    </TableRowColumn>
-  )
-}
-
-export class TeamsTable extends Component <Props> {
-
-  render() {
-    const { teams } = this.props;
-    return (
-      <Table
-      displaySelectAll={false}
-      adjustForCheckbox={false}
-      className="Table"
-    >
-      <TableHeader
-        adjustForCheckbox={false}
-        displaySelectAll={false}
-      >
-        <TableRow
-        style={styles.tableCol}
-        >
-          <TableHeaderColumn className="Table-Col-Nam">
-            Team
-          </TableHeaderColumn>
-          <TeamHeaderColumnDefault text='GP'/>
-          <TeamHeaderColumnDefault text='W'/>
-          <TeamHeaderColumnDefault text='D'/>
-          <TeamHeaderColumnDefault text='L'/>
-          <TeamHeaderColumnDefault text='GF'/>
-          <TeamHeaderColumnDefault text='GA'/>          <TeamHeaderColumnDefault text='GD'/>
-          <TeamHeaderColumnDefault text='Points'/>
-        </TableRow>
-      </TableHeader>
-      <TableBody
-        displayRowCheckbox={false}
-      >
-      {teams ? teams.map((team) => (
-        <TableRow
-          key={team.TeamID}
-          style={{height: '25px'}}
-        >
-          <TableRowColumn className="Table-Col-Nam" style={{height: '25px'}}>
-            {team.Name}
-          </TableRowColumn>
-          <TeamColumnDefault text={team.GamesWon + team.GamesDrawn + team.GamesLost}/>
-          <TeamColumnDefault text={team.GamesWon}/>
-          <TeamColumnDefault text={team.GamesDrawn}/>
-          <TeamColumnDefault text={team.GamesLost}/>
-          <TeamColumnDefault text={team.GoalsScored}/>
-          <TeamColumnDefault text={team.GoalsAllowed}/>
-          <TeamColumnDefault text={team.GoalsScored - team.GoalsAllowed}/>
-          <TeamColumnDefault text={team.GamesWon * 2 + team.GamesDrawn}/>
-        </TableRow>
-      )): null}
-      </TableBody>
-    </Table>
-  )
+class TeamsTable extends Component<*> {
+  render(){
+    return(
+      <Table className='Table'>
+        <TableHead>
+          <TableRow>
+            {columnData.map(column => {
+              return (
+                <TableCell
+                  key={column.id}
+                  numeric={column.numeric}
+                  sortDirection={ column.id === 'points' ? 'asc' : false}
+                >
+                {column.label}
+              </TableCell>
+              )
+            })}
+          </TableRow>
+        </TableHead>
+      </Table>
+    )
   }
-};
-
-const mapStateToProps = state => {
-  return { teams: state.teamsReducer.teams }
 }
- 
-export default connect(mapStateToProps)(TeamsTable);
+
+export default TeamsTable;

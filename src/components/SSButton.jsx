@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from 'material-ui/Button';
 
 type Props = {
   label: string,
@@ -9,15 +9,17 @@ type Props = {
 }
 
 const SSButton = (props: Props) => (
-  <RaisedButton
+  <Button
+    variant='raised'
     disabled={props.disabled}
-    label={props.label}
     onClick={props.onClick}
-    backgroundColor='#C5E1A5'
     style={{
       margin: 10,
+      backgroundColor: '#C5E1A5',
     }}
-  />
+    >
+    {props.label}
+  </Button>
 );
 
 export default SSButton;
