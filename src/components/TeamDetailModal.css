@@ -1,0 +1,104 @@
+.TeamDetailModal-Content {
+  padding: 20px 0;
+}
+
+.TeamDetailModal-Stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.TeamDetailModal-StatItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.TeamDetailModal-StatLabel {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.TeamDetailModal-StatValue {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.TeamDetailModal-MatchHistory {
+  padding: 0 10px;
+}
+
+.TeamDetailModal-MatchHistory h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.TeamDetailModal-MatchList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.TeamDetailModal-MatchItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.TeamDetailModal-MatchItem:last-child {
+  border-bottom: none;
+}
+
+.TeamDetailModal-Week {
+  font-weight: bold;
+  color: #666;
+  min-width: 60px;
+}
+
+.TeamDetailModal-Opponent {
+  flex: 1;
+  color: #333;
+}
+
+.TeamDetailModal-Result {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 3px;
+  min-width: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.TeamDetailModal-Result-W {
+  background-color: #4caf50;
+  color: white;
+}
+
+.TeamDetailModal-Result-D {
+  background-color: #ff9800;
+  color: white;
+}
+
+.TeamDetailModal-Result-L {
+  background-color: #f44336;
+  color: white;
+}
+
+.TeamDetailModal-Score {
+  font-weight: bold;
+  color: #333;
+  min-width: 40px;
+  text-align: right;
+}
