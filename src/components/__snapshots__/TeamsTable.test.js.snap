@@ -1,236 +1,252 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TeamsTable matches snapshot with mock teams 1`] = `
-<Table
-  adjustForCheckbox={false}
-  allRowsSelected={false}
-  className="Table"
-  displaySelectAll={false}
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={true}
->
-  <TableHeader
+<div>
+  <Table
     adjustForCheckbox={false}
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
-  >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
-      style={
-        Object {
-          "height": "25px",
-          "paddingBottom": "0px",
-          "paddingLeft": "10px",
-          "paddingRight": "10px",
-          "paddingTop": "0px",
-          "textAlign": "center",
-          "width": "40px",
-        }
-      }
-    >
-      <TableHeaderColumn
-        className="Table-Col-Nam"
-      >
-        Team
-      </TableHeaderColumn>
-      <TeamHeaderColumnDefault
-        text="GP"
-      />
-      <TeamHeaderColumnDefault
-        text="W"
-      />
-      <TeamHeaderColumnDefault
-        text="D"
-      />
-      <TeamHeaderColumnDefault
-        text="L"
-      />
-      <TeamHeaderColumnDefault
-        text="GF"
-      />
-      <TeamHeaderColumnDefault
-        text="GA"
-      />
-                
-      <TeamHeaderColumnDefault
-        text="GD"
-      />
-      <TeamHeaderColumnDefault
-        text="Points"
-      />
-    </TableRow>
-  </TableHeader>
-  <TableBody
     allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
+    className="Table"
+    displaySelectAll={false}
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
     multiSelectable={false}
-    preScanRows={true}
     selectable={true}
-    style={Object {}}
   >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      key="ARS"
-      selectable={true}
-      striped={false}
-      style={
-        Object {
-          "height": "25px",
-        }
-      }
+    <TableHeader
+      adjustForCheckbox={false}
+      displaySelectAll={false}
+      enableSelectAll={true}
+      selectAllSelected={false}
     >
-      <TableRowColumn
-        className="Table-Col-Nam"
+      <TableRow
+        displayBorder={true}
         hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
         style={
           Object {
             "height": "25px",
+            "paddingBottom": "0px",
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "paddingTop": "0px",
+            "textAlign": "center",
+            "width": "40px",
           }
         }
-      />
-      <TeamColumnDefault
-        text={NaN}
-      />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault
-        text={NaN}
-      />
-      <TeamColumnDefault
-        text={NaN}
-      />
-    </TableRow>
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      key="TOT"
+      >
+        <TableHeaderColumn
+          className="Table-Col-Nam"
+        >
+          Team
+        </TableHeaderColumn>
+        <TeamHeaderColumnDefault
+          text="GP"
+        />
+        <TeamHeaderColumnDefault
+          text="W"
+        />
+        <TeamHeaderColumnDefault
+          text="D"
+        />
+        <TeamHeaderColumnDefault
+          text="L"
+        />
+        <TeamHeaderColumnDefault
+          text="GF"
+        />
+        <TeamHeaderColumnDefault
+          text="GA"
+        />
+        <TeamHeaderColumnDefault
+          text="GD"
+        />
+        <TeamHeaderColumnDefault
+          text="Points"
+        />
+      </TableRow>
+    </TableHeader>
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
       selectable={true}
-      striped={false}
-      style={
-        Object {
-          "height": "25px",
-        }
-      }
+      style={Object {}}
     >
-      <TableRowColumn
-        className="Table-Col-Nam"
-        hoverable={false}
+      <TableRow
+        displayBorder={true}
+        hoverable={true}
+        hovered={false}
+        key="ARS"
+        onClick={[Function]}
+        selectable={true}
+        striped={false}
         style={
           Object {
+            "cursor": "pointer",
             "height": "25px",
           }
         }
-      />
-      <TeamColumnDefault
-        text={NaN}
-      />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault />
-      <TeamColumnDefault
-        text={NaN}
-      />
-      <TeamColumnDefault
-        text={NaN}
-      />
-    </TableRow>
-  </TableBody>
-</Table>
+      >
+        <TableRowColumn
+          className="Table-Col-Nam"
+          hoverable={false}
+          style={
+            Object {
+              "height": "25px",
+            }
+          }
+        />
+        <TeamColumnDefault
+          text={NaN}
+        />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault
+          text={NaN}
+        />
+        <TeamColumnDefault
+          text={NaN}
+        />
+      </TableRow>
+      <TableRow
+        displayBorder={true}
+        hoverable={true}
+        hovered={false}
+        key="TOT"
+        onClick={[Function]}
+        selectable={true}
+        striped={false}
+        style={
+          Object {
+            "cursor": "pointer",
+            "height": "25px",
+          }
+        }
+      >
+        <TableRowColumn
+          className="Table-Col-Nam"
+          hoverable={false}
+          style={
+            Object {
+              "height": "25px",
+            }
+          }
+        />
+        <TeamColumnDefault
+          text={NaN}
+        />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault />
+        <TeamColumnDefault
+          text={NaN}
+        />
+        <TeamColumnDefault
+          text={NaN}
+        />
+      </TableRow>
+    </TableBody>
+  </Table>
+  <Connect(TeamDetailModal)
+    onClose={[Function]}
+    open={false}
+    team={null}
+  />
+</div>
 `;
 
 exports[`TeamsTable renders without teams 1`] = `
-<Table
-  adjustForCheckbox={false}
-  allRowsSelected={false}
-  className="Table"
-  displaySelectAll={false}
-  fixedFooter={true}
-  fixedHeader={true}
-  height="inherit"
-  multiSelectable={false}
-  selectable={true}
->
-  <TableHeader
+<div>
+  <Table
     adjustForCheckbox={false}
-    displaySelectAll={false}
-    enableSelectAll={true}
-    selectAllSelected={false}
-  >
-    <TableRow
-      displayBorder={true}
-      hoverable={false}
-      hovered={false}
-      selectable={true}
-      striped={false}
-      style={
-        Object {
-          "height": "25px",
-          "paddingBottom": "0px",
-          "paddingLeft": "10px",
-          "paddingRight": "10px",
-          "paddingTop": "0px",
-          "textAlign": "center",
-          "width": "40px",
-        }
-      }
-    >
-      <TableHeaderColumn
-        className="Table-Col-Nam"
-      >
-        Team
-      </TableHeaderColumn>
-      <TeamHeaderColumnDefault
-        text="GP"
-      />
-      <TeamHeaderColumnDefault
-        text="W"
-      />
-      <TeamHeaderColumnDefault
-        text="D"
-      />
-      <TeamHeaderColumnDefault
-        text="L"
-      />
-      <TeamHeaderColumnDefault
-        text="GF"
-      />
-      <TeamHeaderColumnDefault
-        text="GA"
-      />
-                
-      <TeamHeaderColumnDefault
-        text="GD"
-      />
-      <TeamHeaderColumnDefault
-        text="Points"
-      />
-    </TableRow>
-  </TableHeader>
-  <TableBody
     allRowsSelected={false}
-    deselectOnClickaway={true}
-    displayRowCheckbox={false}
+    className="Table"
+    displaySelectAll={false}
+    fixedFooter={true}
+    fixedHeader={true}
+    height="inherit"
     multiSelectable={false}
-    preScanRows={true}
     selectable={true}
-    style={Object {}}
+  >
+    <TableHeader
+      adjustForCheckbox={false}
+      displaySelectAll={false}
+      enableSelectAll={true}
+      selectAllSelected={false}
+    >
+      <TableRow
+        displayBorder={true}
+        hoverable={false}
+        hovered={false}
+        selectable={true}
+        striped={false}
+        style={
+          Object {
+            "height": "25px",
+            "paddingBottom": "0px",
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "paddingTop": "0px",
+            "textAlign": "center",
+            "width": "40px",
+          }
+        }
+      >
+        <TableHeaderColumn
+          className="Table-Col-Nam"
+        >
+          Team
+        </TableHeaderColumn>
+        <TeamHeaderColumnDefault
+          text="GP"
+        />
+        <TeamHeaderColumnDefault
+          text="W"
+        />
+        <TeamHeaderColumnDefault
+          text="D"
+        />
+        <TeamHeaderColumnDefault
+          text="L"
+        />
+        <TeamHeaderColumnDefault
+          text="GF"
+        />
+        <TeamHeaderColumnDefault
+          text="GA"
+        />
+        <TeamHeaderColumnDefault
+          text="GD"
+        />
+        <TeamHeaderColumnDefault
+          text="Points"
+        />
+      </TableRow>
+    </TableHeader>
+    <TableBody
+      allRowsSelected={false}
+      deselectOnClickaway={true}
+      displayRowCheckbox={false}
+      multiSelectable={false}
+      preScanRows={true}
+      selectable={true}
+      style={Object {}}
+    />
+  </Table>
+  <Connect(TeamDetailModal)
+    onClose={[Function]}
+    open={false}
+    team={null}
   />
-</Table>
+</div>
 `;

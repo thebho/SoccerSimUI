@@ -13,3 +13,12 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+
+/* Hover effect for clickable rows */
+.Table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.Table tbody tr:hover {
+  background-color: #f5f5f5 !important;
+}
